@@ -16,8 +16,11 @@
                 </div>
                 <div class="content">
                     {{ post.content }}
-                    </div>
+                </div>
             </div>
+            <footer class="card-footer">
+                <a href="{{ url_for('update_post', id = post.id) }}" class="card-footer-item"><i class="fa-solid fa-pen-to-square"></i> &nbsp; Editar</a>
+                <a href="{{ url_for('delete_post', id = post.id) }}" class="card-footer-item"><i class="fa-solid fa-trash"></i> &nbsp; Eliminar</a>        
         </div>
         {% endfor %}
     </div>
